@@ -1,0 +1,39 @@
+INSERT INTO Friends (UserID, FriendWhoAdded, NumOfFriends, FriendID, FriendBeingAdded, IsAccepted, DateAdded)
+VALUES
+(1, 'John',	122, 101, 'Alice', TRUE, '2024-09-10'),
+(2, 'Emily', 362, 102, 'Bob', FALSE, '2024-09-12'),
+(3, 'Michael', 124, 103, 'Sarah', TRUE, '2024-09-13'),
+(4, 'Alice', 112, 104, 'John', FALSE, '2024-09-14'),
+(5, 'Sarah', 73, 105, 'Emily', TRUE, '2024-09-15');
+
+INSERT INTO GroupMembershipRequests (GroupMembershipRequestID, GroupID, GroupMemberUserID, IsGroupMembershipAccepted, DateAccepted)
+VALUES
+(201, 301, 101, TRUE, '2024-09-08'),
+(202, 302, 102, FALSE, NULL),
+(203, 301, 103, TRUE, '2024-09-10'),
+(204, 303, 104, TRUE, '2024-09-12'),
+(205, 304, 105, FALSE, NULL);
+
+INSERT INTO Groups (GroupID, GroupName, CreatedBy, DateAdded)
+VALUES
+(301, 'Chess Club', 'John', '2024-08-15'),
+(302, 'Coding Ninjas', 'Emily', '2024-08-20'),
+(303, 'Book Lovers', 'Alice', '2024-09-01'),
+(304, 'Fitness Squad', 'Michael', '2024-09-05'),
+(305, 'Music Enthusiasts', 'Sarah', '2024-09-10');
+
+INSERT INTO Posts (PostID, PostDescription, PostedBy, IsPublic, IsOnlyForFriends, GroupID, DatePosted)
+VALUES
+(1, 'A beautiful sunset over the ocean.', 'John Doe', 1, 0, 301, '2023-03-15'),
+(2, 'Check out my new project! 🎉', 'Emily Wallace', 1, 0, 302, '2023-03-14'),
+(3, 'Happy birthday to my best friend!', 'John Smith', 1, 1, 303, '2023-03-13'),
+(4, 'Learning a new programming language. 💻', 'Alice Johnson', 1, 0, 304, '2023-03-12'),
+(5, 'Just finished a delicious meal. 😋', 'Bob Williams', 1, 0, 305, '2023-03-11);
+
+INSERT INTO Users (UserID, Username, FirstName, LastName, DateOfBirth, Password, DateAdded)
+VALUES 
+(1, 'john.doe','John', 'Doe', '1990-01-01', 'password123', '2022-01-01'),
+(2, 'emily.wallace', 'Emily', 'Wallace', '1992-02-02', 'password123', '2022-01-02'),
+(3, 'bob.williams', 'Bob', 'Williams', '1995-03-03', 'password123', '2022-01-03'),
+(4, 'alice.johnson', 'Alice', 'Johnson', '1998-04-04', 'password123', '2022-01-04'),
+(5, 'john.smith', 'John', 'Smith', '2000-05-05', 'password123', '2022-01-05');
